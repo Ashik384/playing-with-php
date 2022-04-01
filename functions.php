@@ -1,19 +1,19 @@
 <?php
+
 /**
  * Checking Even or Odd Number
  *
  * @param Integer $x
  * @return boolean
  */
-function isEvan($x){
-    if( gettype($x) != 'integer' ){
+function isEvan( $x ): int {
+    if ( gettype( $x ) != 'integer' ) {
         return "invalid";
-    }else{
-        if( $x % 2==0 ){
-            echo "{$x} This is EVEN number";
-        }else{
-            echo "{$x} This is ODD number";
-        }
+    }
+    if ( $x%2 == 0 ) {
+        echo "{$x} This is EVEN number";
+    } else {
+        echo "{$x} This is ODD number";
     }
 }
 /**
@@ -23,7 +23,7 @@ function isEvan($x){
  * @param string $quantity
  * @return void
  */
-function serveRoboto($item='Coffe', $quantity='1 Cups'){
+function serveRoboto( $item = 'Coffe', $quantity = '1 Cups' ) {
     echo "{$quantity} of {$item} has to be served";
 }
 /**
@@ -34,19 +34,19 @@ function serveRoboto($item='Coffe', $quantity='1 Cups'){
  * @param [type] $three
  * @return integer
  */
-function sum($one, $two, $three):int{
+function sum( $one, $two, $three ): int {
     return $one + $two + $three;
 }
 
 /**
- * Multiple Aarguments to a function 
+ * Multiple Aarguments to a function
  *
  * @param integer ...$numbers
  * @return integer
  */
-function sumFun( ...$numbers ):int{
+function sumFun( ...$numbers ): int {
     $sum = 0;
-    for($i = 0; $i<count($numbers); $i++){
+    for ( $i = 0; $i < count( $numbers ); $i++ ) {
         $sum += $numbers[$i];
     }
     return $sum;
@@ -60,11 +60,11 @@ function sumFun( ...$numbers ):int{
  * @param [type] $stepping
  * @return void
  */
-function pritnNumber($start, $end, $stepping){
-    if($start>=$end){
+function pritnNumber( $start, $end, $stepping ) {
+    if ( $start >= $end ) {
         return;
     }
-    echo $start+=$stepping;
+    echo $start += $stepping;
     echo PHP_EOL;
-    pritnNumber($start, $end, $stepping);
+    pritnNumber( $start, $end, $stepping );
 }
